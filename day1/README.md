@@ -84,24 +84,3 @@ For more information on using the Angular CLI, including detailed command refere
 
 
 
-# Angular Todo App
-
-## What I Learned
-
-- **Components**: Created `AppComponent` (parent) and `DemoComponent` (child)  
-- **Templates**: Used HTML templates with loops and bindings  
-- **Property Binding**: Passed data from parent to child (`[todo]`)  
-- **EventEmitter & Outputs**: Child emits events to parent (`(remove)`)  
-- **Signals**: Reactive state management for todos (`todos`) and done status (`done`)  
-- **Flexible Components**: Reusable `DemoComponent` for multiple todo items  
-
-## What I Implemented
-
-- A **Todo list app** with:  
-  - Adding new todos  
-  - Marking todos as done/undo  
-  - Removing todos  
-  - Dynamic total count  
-- Used **signals** to update UI reactively  
-- Applied **property binding** and **outputs** for parent-child communication  
-- Styled buttons and completed todos for better UI
