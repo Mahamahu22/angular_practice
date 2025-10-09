@@ -1,0 +1,41 @@
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  border-bottom: 1px solid #81bbbcff;
+  margin: 0.3rem 0;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: blue;
+}
+
+button {
+  margin-left: 0.5rem;
+  cursor: pointer;
+  padding: 0.3rem 0.6rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  color: white;
+}
+
+
+button:first-of-type {
+  background-color: #3b8085ff; 
+}
+
+button:first-of-type:hover {
+  background-color: #81e5ecff; 
+}
+
+
+button:last-of-type {
+  background-color: #9b4874ff;
+}
+
+button:last-of-type:hover {
+  background-color: #e43291ff; 
+}
