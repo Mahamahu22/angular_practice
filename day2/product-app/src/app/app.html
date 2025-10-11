@@ -1,0 +1,16 @@
+<h1>{{ title }}</h1>
+
+<button (click)="addProduct()">Add Product</button>
+
+<div *ngIf="products().length > 0; else emptyList">
+  <app-product
+    *ngFor="let p of products(); let i = index"
+    [product]="p"
+    (toggle)="toggleAvailability(i)"
+    (remove)="removeProduct(i)"
+  ></app-product>
+</div>
+
+<ng-template #emptyList>
+  <p>No products available.</p>
+</ng-template>

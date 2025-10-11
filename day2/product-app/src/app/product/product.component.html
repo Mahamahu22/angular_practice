@@ -1,0 +1,10 @@
+<div class="product-card" [ngClass]="{ 'out-of-stock': !product.available }">
+  <h3>{{ product.name }}</h3>
+  <p>Price: ₹{{ product.price }}</p>
+
+  <p *ngIf="product.available; else outOfStock">Available</p>
+  <ng-template #outOfStock><p>Out of Stock</p></ng-template>
+
+  <button (click)="toggleStatus()">Toggle Availability</button>
+  <button (click)="deleteProduct()">Remove</button>
+</div>
