@@ -1,0 +1,16 @@
+<div>
+  <input #newTodo type="text" placeholder="Enter new todo" />
+  <button (click)="addTodo(newTodo.value); newTodo.value=''">Add</button>
+</div>
+
+<ul>
+  <li *ngFor="let t of todos()">
+    <app-todo-item
+      [todo]="t"
+      (remove)="removeTodo(t.id)"
+      (toggle)="toggleDone(t.id)">
+    </app-todo-item>
+  </li>
+</ul>
+
+<button (click)="highlightFirstTodo()">Highlight First Todo</button>
