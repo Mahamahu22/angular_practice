@@ -1,0 +1,38 @@
+.home-container {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  max-width: 700px;
+  margin: 40px auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.home-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.home-container .subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.home-container .explore-btn {
+  padding: 12px 25px;
+  font-size: 1rem;
+  background-color: #771169ff;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.home-container .explore-btn:hover {
+  background-color: #84084eff;
+  transform: scale(1.05);
+}

@@ -1,0 +1,44 @@
+.todo-container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #7bbee2ff, #fad0c4);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.todo-container h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #450536ff;
+}
+
+.todo-container .subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+}
+
+.todo-list li {
+  background-color: #ffffff;
+  padding: 12px 15px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-weight: 500;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: default;
+}
+
+.todo-list li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
