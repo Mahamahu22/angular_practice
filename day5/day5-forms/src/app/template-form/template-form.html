@@ -1,0 +1,27 @@
+<form #productForm="ngForm" (ngSubmit)="onSubmit(productForm)">
+  <div>
+    <label>Product Name:</label>
+    <input type="text" name="name" [(ngModel)]="product.name" required minlength="3" />
+    <div *ngIf="productForm.submitted && !product.name"> Name is required</div>
+  </div>
+
+  <div>
+    <label>Price:</label>
+    <input type="number" name="price" [(ngModel)]="product.price" required min="1" />
+    <div *ngIf="productForm.submitted && !product.price"> Price is required</div>
+  </div>
+
+  <div>
+    <label>Category:</label>
+    <input type="text" name="category" [(ngModel)]="product.category" required />
+    <div *ngIf="productForm.submitted && !product.category"> Category is required</div>
+  </div>
+
+  <button type="submit">Add Product</button>
+</form>
+
+<hr />
+<h4>Product List</h4>
+<ul>
+  <li *ngFor="let p of products">{{ p.name }} - ₹{{ p.price }} - {{ p.category }}</li>
+</ul>
