@@ -1,0 +1,29 @@
+<div class="container">
+  <h1>HTTP Parallel & Sequential Calls</h1>
+
+  <button (click)="getParallelData()">Fetch Parallel Data</button>
+  <button (click)="getSequentialData()">Fetch Sequential Hardcoded Data</button>
+  <button (click)="getSequentialRealData()">Fetch Sequential Real Data</button>
+
+  <div *ngIf="loading" class="loading"> Loading data...</div>
+
+  <div class="result" *ngIf="!loading && posts.length">
+    <h3>Parallel Data Loaded </h3>
+    <p><strong>Posts:</strong> {{ posts.length }}</p>
+    <p><strong>Comments:</strong> {{ comments.length }}</p>
+  </div>
+
+ 
+  <div class="result" *ngIf="!loading && todo && userName === 'Mahalakshmi'">
+    <h3>Sequential Hardcoded Data Loaded </h3>
+    <p><strong>Todo Title:</strong> {{ todo?.title }}</p>
+    <p><strong>Assigned User:</strong> {{ userName }}</p>
+  </div>
+
+ 
+  <div class="result" *ngIf="!loading && todo && userName !== 'Mahalakshmi'">
+    <h3>Sequential Real API Data Loaded </h3>
+    <p><strong>Todo Title:</strong> {{ todo?.title }}</p>
+    <p><strong>Assigned User:</strong> {{ userName }}</p>
+  </div>
+</div>
