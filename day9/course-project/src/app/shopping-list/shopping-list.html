@@ -1,0 +1,8 @@
+<div>
+  <h3>Shopping List</h3>
+  <ul>
+    <li *ngFor="let item of ingredients">{{ item.name }} ({{ item.amount }})</li>
+  </ul>
+  <app-shopping-edit (ingredientAdded)="onIngredientAdded($event)"></app-shopping-edit>
+</div>
+

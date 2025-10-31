@@ -1,0 +1,9 @@
+<div *ngIf="recipe" class="recipe-detail">
+  <h3>{{ recipe.name }}</h3>
+  <img [src]="recipe.imagePath" width="200" />
+  <p>{{ recipe.description }}</p>
+</div>
+
+<div *ngIf="!recipe" class="recipe-detail">
+  <p>Select a recipe to see details.</p>
+</div>
