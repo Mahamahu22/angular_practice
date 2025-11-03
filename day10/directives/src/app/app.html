@@ -1,6 +1,6 @@
 <h1>Directive Deep Dive</h1>
 
-<!-- ngFor & ngIf Recap -->
+
 <h2>ngFor & ngIf Recap</h2>
 <ul>
   <li *ngFor="let color of colors">{{ color }}</li>
@@ -11,7 +11,7 @@
 
 <hr>
 
-<!-- ngClass and ngStyle -->
+
 <h2 [ngClass]="{ 'highlight': isActive }" [ngStyle]="{ 'background-color': bgColor }">
   ngClass and ngStyle Example
 </h2>
@@ -19,21 +19,21 @@
 
 <hr>
 
-<!-- Basic Attribute Directive -->
+
 <p appBasicHighlight>Basic Highlight Directive Applied!</p>
 
-<!-- Better Directive using Renderer -->
+
 <p appBetterHighlight>Better Highlight using Renderer</p>
 
-<!-- HostBinding & HostListener -->
+
 <p appHostBinding>Hover to see HostBinding effect!</p>
 
-<!-- Custom Structural Directive -->
+
 <p *appUnless="show">This appears when show = FALSE</p>
 
 <hr>
 
-<!-- ngSwitch Example -->
+
 <div [ngSwitch]="color">
   <p *ngSwitchCase="'red'">Color is Red</p>
   <p *ngSwitchCase="'green'">Color is Green</p>
