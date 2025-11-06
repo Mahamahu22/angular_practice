@@ -1,0 +1,15 @@
+h2 {
+  color: #6a1b9a;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: #f3e5f5;
+  margin: 5px;
+  padding: 8px;
+  border-radius: 6px;
+}
