@@ -1,0 +1,31 @@
+<div class="container">
+  <h1>User Management</h1>
+  <form [formGroup]="userForm" (ngSubmit)="submit()" class="user-form">
+    <input formControlName="name" placeholder="Name" />
+    <input formControlName="address" placeholder="Address" />
+    <button type="submit">{{ editMode ? 'Update' : 'Add' }}</button>
+  </form>
+
+  <h2>Saved Users</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users$ | async">
+        <td>{{ user.id }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.address }}</td>
+        <td>
+          <button (click)="edit(user)">Edit</button>
+          <button (click)="delete(user.id!)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
