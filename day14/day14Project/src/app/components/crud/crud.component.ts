@@ -5,10 +5,29 @@ import { HttpClientModule } from '@angular/common/http';
 import { UserService, User } from '../../services/user.service';
 import { Observable } from 'rxjs';
 
+
+import { MatTableModule } from '@angular/material/table';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
+
 @Component({
   selector: 'app-crud',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, HttpClientModule],
+  imports: [
+    CommonModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    
+    MatTableModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatCardModule,
+    MatIconModule
+  ],
   templateUrl: './crud.component.html',
   styleUrls: ['./crud.component.css']
 })
@@ -16,7 +35,9 @@ export class CrudComponent {
   users$: Observable<User[]>;
   userForm: FormGroup;
   editMode = false;
-  editUserId: string | null = null; 
+  editUserId: string | null = null;
+
+  displayedColumns: string[] = ['id', 'name', 'address', 'actions'];
 
   constructor(private userService: UserService, private fb: FormBuilder) {
     this.users$ = this.userService.users$;
@@ -29,7 +50,7 @@ export class CrudComponent {
   submit() {
     const user: User = this.userForm.value;
     if (this.editMode && this.editUserId !== null) {
-      user.id = this.editUserId; 
+      user.id = this.editUserId;
       this.userService.updateUser(user).subscribe(() => this.resetForm());
     } else {
       this.userService.addUser(user).subscribe(() => this.resetForm());
@@ -38,7 +59,7 @@ export class CrudComponent {
 
   edit(user: User) {
     this.editMode = true;
-    this.editUserId = user.id!; 
+    this.editUserId = user.id!;
     this.userForm.patchValue({
       name: user.name,
       address: user.address

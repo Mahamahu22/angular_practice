@@ -1,0 +1,25 @@
+<h1>Angular Pipes Demo</h1>
+
+<h2>Built-in Pipes</h2>
+<p>Uppercase: {{ title | uppercase }}</p>
+<p>Date: {{ today | date:'fullDate' }}</p>
+<p>Currency: {{ price | currency:'INR' }}</p>
+<p>JSON: {{ user | json }}</p>
+
+<h2>Chaining Pipes</h2>
+<p>{{ title | uppercase | slice:0:10 }}</p>
+
+<h2>Custom Multiply Pipe</h2>
+<p>10 x 5 = {{ 10 | multiply:5 }}</p>
+
+<h2>Filter Pipe</h2>
+<input [(ngModel)]="search" placeholder="search">
+
+<ul>
+  <li *ngFor="let lang of languages | filter:search">
+    {{ lang }}
+  </li>
+</ul>
+
+<h2>Async Pipe</h2>
+<p>{{ data$ | async }}</p>

@@ -1,0 +1,49 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold text-light" href="#">
+      🌸 {{ title }}
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container my-4">
+  <div class="row g-4">
+    <div class="col-sm-6 col-md-4 col-lg-3" *ngFor="let flower of flowers">
+      <mat-card class="flower-card shadow-sm">
+        <img mat-card-image [src]="flower.img" [alt]="flower.name">
+        <mat-card-content>
+          <h5>{{ flower.name }}</h5>
+          <p>{{ flower.desc }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button color="primary">View</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>
+
+
+<footer class="bg-dark text-light text-center py-3 mt-4">
+  <small>&copy; 2025 Flower Gallery. All Rights Reserved.</small>
+</footer>
