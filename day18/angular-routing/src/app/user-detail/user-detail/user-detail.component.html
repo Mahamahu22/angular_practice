@@ -1,0 +1,8 @@
+<mat-card *ngIf="user">
+  <mat-card-title>{{ user.name }}</mat-card-title>
+  <mat-card-content>
+    <p>ID: {{ user.id }}</p>
+    <p>Email: {{ user.email }}</p>
+    <img [src]="'https://i.pravatar.cc/150?img=' + user.id" alt="{{user.name}}" class="user-image-detail"/>
+  </mat-card-content>
+</mat-card>

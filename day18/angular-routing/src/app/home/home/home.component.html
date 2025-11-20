@@ -1,0 +1,16 @@
+<mat-card>
+  <mat-card-title>Welcome to Gallery</mat-card-title>
+  <mat-card-content>
+    <p>Discover flowers</p>
+
+    <div class="gallery">
+      <mat-card class="gallery-card" *ngFor="let flower of flowers">
+        <img mat-card-image [src]="flower.image" [alt]="flower.name">
+        <mat-card-content>
+          <h3>{{ flower.name }}</h3>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+  </mat-card-content>
+</mat-card>

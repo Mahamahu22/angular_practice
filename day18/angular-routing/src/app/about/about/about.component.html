@@ -1,0 +1,17 @@
+<mat-card>
+  <mat-card-title>About Our App</mat-card-title>
+  <mat-card-content>
+    <p>This app demonstrates Angular routing, authentication, and a dynamic flower gallery.</p>
+
+    <h3>Meet the Team</h3>
+    <div class="team-gallery">
+      <mat-card class="team-card" *ngFor="let member of teamMembers">
+        <img mat-card-image [src]="member.image" [alt]="member.name">
+        <mat-card-content>
+          <h4>{{ member.name }}</h4>
+          <p>{{ member.role }}</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </mat-card-content>
+</mat-card>

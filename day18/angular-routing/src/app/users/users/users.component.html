@@ -1,0 +1,14 @@
+<mat-card>
+  <mat-card-title>Users List</mat-card-title>
+  <mat-card-content>
+    <ul class="user-list">
+      <li *ngFor="let user of users" (click)="goToDetails(user.id)">
+        <img [src]="'https://i.pravatar.cc/150?img=' + user.id" alt="{{user.name}}" class="user-image"/>
+        <span class="user-name">{{ user.name }}</span>
+      </li>
+    </ul>
+
+    
+    <router-outlet></router-outlet>
+  </mat-card-content>
+</mat-card>
