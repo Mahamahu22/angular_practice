@@ -1,0 +1,14 @@
+{
+  "items": [
+    {
+      "name": "Milk",
+      "amount": 53,
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "name": "Fruits",
+      "amount": 120
+    }
+  ]
+}

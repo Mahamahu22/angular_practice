@@ -1,0 +1,49 @@
+<div class="container">
+  <h2>Shop List</h2>
+
+  <mat-form-field class="w-100">
+    <input matInput placeholder="Item Name" [(ngModel)]="name" />
+  </mat-form-field>
+
+  <mat-form-field class="w-100">
+    <input matInput placeholder="Amount" type="number" [(ngModel)]="amount" />
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="addOrUpdate()">
+    {{ editId === null ? 'Add Item' : 'Update Item' }}
+  </button>
+
+  <br /><br />
+
+  <table mat-table [dataSource]="items" class="mat-elevation-z2 w-100">
+
+   
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Name</th>
+      <td mat-cell *matCellDef="let e">{{ e.name }}</td>
+    </ng-container>
+
+    
+    <ng-container matColumnDef="amount">
+      <th mat-header-cell *matHeaderCellDef>Amount</th>
+      <td mat-cell *matCellDef="let e">{{ e.amount }}</td>
+    </ng-container>
+
+  
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef>Actions</th>
+      <td mat-cell *matCellDef="let e">
+        <button mat-icon-button color="primary" (click)="edit(e)">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button color="warn" (click)="delete(e.id)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="['name','amount','actions']"></tr>
+    <tr mat-row *matRowDef="let row; columns: ['name','amount','actions']"></tr>
+
+  </table>
+</div>
