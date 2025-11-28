@@ -1,0 +1,84 @@
+/* Fullpage center */
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #dbeafe, #fef3c7);
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Glass Card */
+.card {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 35px;
+  width: 330px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  backdrop-filter: blur(10px);
+  text-align: center;
+}
+
+/* Heading */
+h2 {
+  margin-bottom: 18px;
+  font-size: 26px;
+  color: #1e293b;
+  font-weight: bold;
+}
+
+/* Counter */
+.counter-value {
+  font-size: 45px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+
+/* Double value */
+.double-value {
+  font-size: 20px;
+  color: #334155;
+  margin-bottom: 25px;
+}
+
+/* Buttons layout */
+.btn-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+/* Button Style */
+button {
+  flex: 1;
+  padding: 12px 0;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+/* Custom button colors */
+.increment {
+  background-color: #22c55e;
+  color: white;
+}
+
+.decrement {
+  background-color: #ef4444;
+  color: white;
+}
+
+.reset {
+  background-color: #6366f1;
+  color: white;
+}
+
+/* Hover animation */
+button:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
