@@ -1,0 +1,59 @@
+
+<h2 class="title"> Professional Animations</h2>
+
+
+<div class="button-row">
+  <button class="btn left" (click)="showAnim('left')">Left Animation</button>
+  <button class="btn center" (click)="showAnim('center')">Center Animation</button>
+  <button class="btn right" (click)="showAnim('right')">Right Animation</button>
+</div>
+
+
+<div class="display-area">
+
+  
+  <div *ngIf="showLeft"
+       @slideLeft
+       class="anim-box">
+    Slide From Left
+  </div>
+
+ 
+  <div *ngIf="showCenter"
+       @zoomCenter
+       class="anim-box">
+    Zoom From Center
+  </div>
+
+
+  <div *ngIf="showRight"
+       @slideRight
+       class="anim-box">
+    Slide From Right
+  </div>
+
+</div>
+
+<hr class="divider">
+
+
+<div class="button-row">
+  <button class="btn color" (click)="toggleColor()">Color Change Effect</button>
+  <button class="btn bounce" (click)="toggleBounce()">Bounce Effect</button>
+</div>
+
+<div class="display-area">
+
+  
+  <div *ngIf="showColor" class="anim-box color-pulse">
+    Color Changing Box
+  </div>
+
+
+  <div *ngIf="showBounce"
+       @bounceBox
+       class="anim-box">
+    Bounce Effect Box
+  </div>
+
+</div>
